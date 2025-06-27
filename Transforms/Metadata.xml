@@ -1,0 +1,41 @@
+<metadata>
+  <!-- Fix common Lottie binding issues -->
+  
+  <!-- Remove internal/obfuscated classes that might cause issues -->
+  <remove-node path="/api/package[@name='com.airbnb.lottie']/class[contains(@name, '$')]" />
+  
+  <!-- Fix IValueParser interface issues -->
+  <attr path="/api/package[@name='com.airbnb.lottie.parser']/interface[@name='ValueParser']" name="name">IValueParser</attr>
+  
+  <!-- Fix generic type issues -->
+  <attr path="/api/package[@name='com.airbnb.lottie.value']/class[@name='LottieValueCallback']" name="obfuscated">false</attr>
+  
+  <!-- Ensure proper visibility for key classes -->
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieAnimationView']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieDrawable']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieComposition']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieCompositionFactory']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieResult']" name="visibility">public</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieTask']" name="visibility">public</attr>
+  
+  <!-- Fix parameter names for better C# usage -->
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieAnimationView']//method/parameter[@name='p0']" name="name">param0</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieAnimationView']//method/parameter[@name='p1']" name="name">param1</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie']/class[@name='LottieAnimationView']//method/parameter[@name='p2']" name="name">param2</attr>
+  
+  <!-- Fix IAnimatableValue interface issues -->
+  <attr path="/api/package[@name='com.airbnb.lottie.model.animatable']/interface[@name='IAnimatableValue']/method[@name='getKeyframes']" name="return">System.Collections.IList</attr>
+  
+  <!-- Fix AnimatablePathValue and AnimatableSplitDimensionPathValue to match interface -->
+  <attr path="/api/package[@name='com.airbnb.lottie.model.animatable']/class[@name='AnimatablePathValue']/method[@name='getKeyframes']" name="return">System.Collections.IList</attr>
+  <attr path="/api/package[@name='com.airbnb.lottie.model.animatable']/class[@name='AnimatableSplitDimensionPathValue']/method[@name='getKeyframes']" name="return">System.Collections.IList</attr>
+  
+  <!-- Remove problematic parser implementations that cause interface issues -->
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='FloatParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='IntegerParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='PointFParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='ScaleXYParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='ShapeDataParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='PathParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+  <remove-node path="/api/package[@name='com.airbnb.lottie.parser']/class[@name='GradientColorParser']/implements[@name='com.airbnb.lottie.parser.ValueParser']" />
+</metadata>

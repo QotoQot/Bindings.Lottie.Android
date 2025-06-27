@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsTrimmable>true</IsTrimmable>
+    <!-- Android binding specific properties -->
+    <IsBindingProject>true</IsBindingProject>
+    <AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+
+    <RootNamespace>QotoQot.Bindings.Lottie.Android</RootNamespace>
+    <AssemblyName>QotoQot.Bindings.Lottie.Android</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <PackageId>QotoQot.Bindings.Lottie.Android</PackageId>
+    <Title>Lottie Android Bindings</Title>
+    <Authors>QotoQot</Authors>
+    <Description>.NET 9 bindings for Lottie Android</Description>
+    <PackageTags>lottie;android;animation;airbnb;aftereffects;dotnet;bindings;xamarin</PackageTags>
+    <PackageProjectUrl>https://github.com/QotoQot/Bindings.Lottie.Android</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/QotoQot/Bindings.Lottie.Android</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release of .NET 9 bindings for Lottie Android  v6.6.7 (the latest version in June 2025)</PackageReleaseNotes>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AndroidLibrary Include="lottie.aar">
+      <Bind>true</Bind>
+    </AndroidLibrary>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.Core" Version="1.15.0.2" />
+    <PackageReference Include="Square.OkIO" Version="3.9.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml" />
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+</Project>
