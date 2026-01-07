@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0-android</TargetFramework>
+    <TargetFramework>net10.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -15,18 +15,18 @@
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <PackageId>QotoQot.Bindings.Lottie.Android</PackageId>
     <Title>Lottie Android Bindings</Title>
     <Authors>QotoQot</Authors>
-    <Description>.NET 9 bindings for Lottie Android</Description>
+    <Description>.NET 10 bindings for Lottie Android</Description>
     <PackageTags>lottie;android;animation;airbnb;aftereffects;dotnet;bindings;xamarin</PackageTags>
     <PackageProjectUrl>https://github.com/QotoQot/Bindings.Lottie.Android</PackageProjectUrl>
     <RepositoryUrl>https://github.com/QotoQot/Bindings.Lottie.Android</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Initial release of .NET 9 bindings for Lottie Android  v6.6.7 (the latest version in June 2025)</PackageReleaseNotes>
+    <PackageReleaseNotes>.NET 10 bindings for Lottie Android v6.7.1</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
